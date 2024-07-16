@@ -1,0 +1,199 @@
+:root {
+    --main-color: #E3051A;
+    --secondary-color: #30373f;
+    --heading-color: #242424;
+    --paragraph-color: #343434;
+    --heading-font: 'Source Serif Pro', sans-serif;
+    --body-font: 'Barlow', sans-serif;
+    --secondary-font: 'Roboto', sans-serif;
+    --third-font: 'Open Sans', sans-serif;
+    --fourth-font: 'Midnight Signature';
+}
+
+/* General styles */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--heading-color);
+    font-family: var(--heading-font);
+}
+
+h1 {
+    font-size: 3rem;
+    line-height: 1.083;
+}
+
+.container {
+
+    width: 100%;
+    padding: 0 1rem;
+    margin: 0 auto;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -rem;
+}
+
+.col {
+    position: relative;
+    width: 100%;
+    padding: 0 1rem;
+}
+
+/* Column sizes */
+@media (min-width: 36em) {
+    .container {
+        max-width: 33.75em;
+    }
+}
+
+@media (min-width: 48em) {
+    .container {
+        max-width:45em;
+    }
+}
+
+@media (min-width: 62em) {
+    .container {
+        max-width: 60em;
+    }
+
+    .col-lg-5 {
+        flex: 0 0 41.67%;
+        max-width: 41.67%;
+    }
+
+    .col-lg-7 {
+        flex: 0 0 58.33%;
+        align-items: center;
+        justify-content: center;
+        max-width: 58.33%;
+    }
+}
+
+@media (min-width: 75em) {
+    .container {
+        max-width: 71.25em;
+    }
+}
+
+@media (min-width:  87.5em) {
+    .container {
+        max-width: 80em;
+    }
+}
+
+@media (min-width: 106.25em) {
+    .container {
+        max-width: 102.5em;
+    }
+}
+
+/* Specific component styles */
+.home-contact {
+    margin-top:  6.25rem;
+    position: relative;
+}
+
+.home-contact .contact-title h1 {
+    background: #fff;
+    box-shadow: 0 0 15px #ccc;
+    margin: 0 auto;
+    width: 30rem;
+    font-size: 3.5rem;
+    font-weight: 700;
+    font-family: var(--body-font);
+    border-left: 15px solid var(--main-color);
+    padding: 0.625rem;
+    position: absolute;
+    left: 36%;
+    top: 3.74rem;
+    z-index: 9999;
+}
+
+@media (max-width: 62em) {
+    .home-contact .contact-title h1 {
+        left: 0;
+        display: none;
+    }
+
+    .row {
+        flex-direction: column;
+    }
+
+}
+
+.home-contact .contact-row {
+    box-shadow: 0 0 1rem #ccc;
+}
+
+.home-contact .contact-right {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+}
+
+.mapouter,
+.gmap_canvas {
+    position: relative;
+    text-align: right;
+    height: 100%;
+    width: 100%;
+    min-height: 25rem;
+    overflow: hidden;
+}
+
+
+#popover-text {
+    background-color: white;
+    padding: 0.25rem;
+    border: 1px solid black;
+    border-radius: 0.25rem;
+    position: absolute;     
+}
+
+/* slider styles */
+/* 
+.column-navigation button {
+    display: block;
+    text-align: center;
+    padding: 0.625rem;
+    color: blue;
+    font-size: 1rem;
+}
+
+.column-navigation button:hover {
+    background-color: #55828d;
+}
+
+.link-button {
+    background: none;
+    color: blue;
+    border: none;
+    padding: 0;
+    text-decoration: none;
+    cursor: pointer;
+    font: inherit;
+    display: inline;
+  }
+  
+  .link-button:hover,
+  .link-button:focus {
+    text-decoration: none;
+    outline: none;
+  }
+  
+  .city-item {
+    text-align: center; 
+    margin: 10px; 
+  }
+   */
+
+   .active{
+    background-color: #4CAF50
+  }
