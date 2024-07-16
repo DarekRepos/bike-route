@@ -25,7 +25,7 @@ import Polygon from 'ol/geom/Polygon';
 
 interface Props {}
 
-const AustralianCitiesMap: React.FC<Props> = () => {
+const VistulaCitiesMap: React.FC<Props> = () => {
   const centerCoordinate = fromLonLat([21.968889, 51.147222]);
   const [cityData, setCityData] = useState<CityData | null>(null);
   const dataUrl = './data/route_cities.geojson';
@@ -35,9 +35,9 @@ const AustralianCitiesMap: React.FC<Props> = () => {
   const navElementsRef = useRef<HTMLElement | null>(null);
   const cityNameElementRef = useRef<HTMLElement | null>(null);
   const cityImageElementRef = useRef<HTMLImageElement | null>(null);
-  const austCitiesLayerRef = useRef<VectorLayer<Feature> | null>(null);
+  const vistulaCitiesLayerRef = useRef<VectorLayer<Feature> | null>(null);
 
-  const aussieCitiesStyle = (feature: FeatureLike) => {
+  const vistulaCitiesStyle = (feature: FeatureLike) => {
     const cityID = feature.get('ID').toString();
     return new Style({
       image: new CircleStyle({
@@ -76,15 +76,15 @@ const AustralianCitiesMap: React.FC<Props> = () => {
     const navElements = navElementsRef.current;
     const cityNameElement = cityNameElementRef.current;
     const cityImageElement = cityImageElementRef.current;
-    const austCitiesLayer = austCitiesLayerRef.current;
+    const vistulaCitiesLayer = vistulaCitiesLayerRef.current;
 
-    if (!map || !navElements || !cityNameElement || !cityImageElement || !austCitiesLayer) {
+    if (!map || !navElements || !cityNameElement || !cityImageElement || !vistulaCitiesLayer) {
       console.error('Some elements or layers are not initialized properly.');
       return;
     }
 
     const mapView = map.getView();
-    const aussieCitiesFeatures = austCitiesLayer.getSource()?.getFeatures() || [];
+    const vistulaCitiesFeatures = vistulaCitiesLayer.getSource()?.getFeatures() || [];
 
     const currentActiveStyledElement = document.querySelector('.active');
     if (currentActiveStyledElement) {
@@ -92,8 +92,8 @@ const AustralianCitiesMap: React.FC<Props> = () => {
     }
     clickedAnchorElement?.classList.add('active');
 
-    aussieCitiesFeatures.forEach((feature) => {
-      feature.setStyle(aussieCitiesStyle);
+    vistulaCitiesFeatures.forEach((feature) => {
+      feature.setStyle(vistulaCitiesStyle);
     });
 
     if (!feature) {
@@ -128,13 +128,13 @@ const AustralianCitiesMap: React.FC<Props> = () => {
       currentActiveStyledElement.classList.remove('active');
     }
     clickedAnchorElement?.classList.add('active');
-    
+
     if (clickedAnchorElementID === 'Home') {
       updateMapAndUI(undefined, clickedAnchorElement);
     } else {
-      const austCitiesLayer = austCitiesLayerRef.current;
-      if (!austCitiesLayer) return;
-      const feature = austCitiesLayer.getSource()?.getFeatures().find(
+      const vistulaCitiesLayer = vistulaCitiesLayerRef.current;
+      if (!vistulaCitiesLayer) return;
+      const feature = vistulaCitiesLayer.getSource()?.getFeatures().find(
         (f) => f.get('Cityname') === clickedAnchorElementID
       );
       updateMapAndUI(feature, clickedAnchorElement);
@@ -157,16 +157,16 @@ const AustralianCitiesMap: React.FC<Props> = () => {
 
     mapRef.current = map;
 
-    const austCitiesLayer = new VectorLayer({
+    const vistulaCitiesLayer = new VectorLayer({
       source: new VectorSource({
         format: new GeoJSON(),
         url: dataUrl,
       }),
-      style: aussieCitiesStyle,
+      style: vistulaCitiesStyle,
     });
 
-    austCitiesLayerRef.current = austCitiesLayer;
-    map.addLayer(austCitiesLayer);
+    vistulaCitiesLayerRef.current = vistulaCitiesLayer;
+    map.addLayer(vistulaCitiesLayer);
 
     fetch(dataUrl)
       .then((response) => response.json())
@@ -260,4 +260,4 @@ const AustralianCitiesMap: React.FC<Props> = () => {
   );
 };
 
-export default AustralianCitiesMap;
+export default VistulaCitiesMap;
