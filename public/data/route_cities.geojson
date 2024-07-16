@@ -1,0 +1,305 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "ID": 1,
+        "Cityname": "Kazimierz Dolny",
+        "Cityimage": "Kazimierz_Dolny_Image"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.945747,
+          51.322069
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ID": 2,
+        "Cityname": "Cholewianka",
+        "Cityimage": "Cholewianka_Image"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.9507,
+          51.305521
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ID": 3,
+        "Cityname": "Zagajdzie",
+        "Cityimage": "Zagajdzie_Image"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.965278,
+          51.271667
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ID": 4,
+        "Cityname": "Rogów",
+        "Cityimage": "Rogow_Image"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.949167,
+          51.256944
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ID": 5,
+        "Cityname": "Polanówka",
+        "Cityimage": "Polanowka_Image"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.932222,
+          51.249167
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ID": 6,
+        "Cityname": "Pomorze",
+        "Cityimage": "Pomorze_Image"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.953056,
+          51.184722
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ID": 7,
+        "Cityname": "Opole Lubelskie Zespół Szkół Nr 1",
+        "Cityimage": "Opole_Lubelskie_Zespól_Szkol_Nr_1_Image"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.968889,
+          51.147222
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ID": 8,
+        "Cityname": "Grabówka most na rzece Chodelce",
+        "Cityimage": "Grabowka_most_na_rzece_Chodelce_Image"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          22.005556,
+          51.152222
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ID": 9,
+        "Cityname": "Dębiny",
+        "Cityimage": "Debiny_Image"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          22.069444,
+          51.15
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ID": 10,
+        "Cityname": "Siewalka Szkoła Podstawowa",
+        "Cityimage": "Siewalka_Szkola_Podstawowa_Image"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          22.116667,
+          51.166667
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ID": 11,
+        "Cityname": "Ruda Godowska przepust drogowy na Cieku Lipiniaka",
+        "Cityimage": "Ruda_Godowska_przepust_drogowy_na_Cieku_Lipiniaka_Image"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          22.074722,
+          51.139722
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ID": 12,
+        "Cityname": "Budzyń",
+        "Cityimage": "Budzyn_Image"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          22.103056,
+          51.118056
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ID": 13,
+        "Cityname": "Wólka Komaszycka",
+        "Cityimage": "Wólka_Komaszycka_Image"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          22.083889,
+          51.119167
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ID": 14,
+        "Cityname": "Puszno Godowskie",
+        "Cityimage": "Puszno_Godowskie_Image"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          22.055556,
+          51.093889
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ID": 15,
+        "Cityname": "Dąbrowa Godowska",
+        "Cityimage": "Dabrowa_Godowska_Image"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          22.063056,
+          51.075
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ID": 16,
+        "Cityname": "Świdno",
+        "Cityimage": "Swidno_Image"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          22.074167,
+          51.058889
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ID": 17,
+        "Cityname": "Majdan Bobowski",
+        "Cityimage": "Majdan_Bobowski_Image"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          22.0625,
+          51.048056
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ID": 18,
+        "Cityname": "Kol. Boby",
+        "Cityimage": "Kol_Boby_Image"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          22.043056,
+          51.027222
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ID": 19,
+        "Cityname": "Natalin",
+        "Cityimage": "Natalin_Image"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          22.067222,
+          51.003056
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ID": 20,
+        "Cityname": "Bęczyn",
+        "Cityimage": "Beczyn_Image"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          22.111667,
+          50.992778
+        ]
+      }
+    }
+  ]
+}
