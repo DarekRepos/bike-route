@@ -1,18 +1,11 @@
 ---
-import GeoMap from "../components/Maps/GeoMap";
-
-
-
+import Container from '../components/Container.astro'
+import GeoMap from '../components/Map/GeoMap'
+import Layout from '../layouts/Layout.astro'
 ---
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GeoJSON Map</title>
-</head>
-<body>
-    <GeoMap client:load/>
-</body>
-</html>
+<Layout active='route'>
+  <Container>
+    <GeoMap client:load />
+  </Container>
+</Layout>
