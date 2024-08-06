@@ -1,0 +1,29 @@
+---
+import { Image } from 'astro:assets'
+import Navigation from './Navigation.astro'
+import Container from './Container.astro'
+const { active } = Astro.props
+---
+
+<div class='bg-gray-800'>
+  <Container>
+    <header
+      class='flex w-full max-w-7xl items-center justify-between justify-self-center px-24 py-12 max-sm:px-5 max-sm:py-10'
+    >
+      <a href='/' class='flex items-center gap-x-4'>
+        <Image
+          src='/images/bike-svgrepo-com.svg'
+          alt='forgotten recipes logo'
+          width={64}
+          height={64}
+          format='webp'
+          loading={'eager'}
+          class='w-16'
+        />
+
+        <p class='text-3xl text-white uppercase max-xl:hidden'>Bike travel</p>
+      </a>
+      <Navigation active={active} />
+    </header>
+  </Container>
+</div>
