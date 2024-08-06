@@ -1,51 +1,102 @@
 ---
-interface Props {
-	title: string;
+import Header from '../components/Header.astro'
+import Footer from '../components/Footer.astro'
+import ToTopButton from '../components/ToTopButton.astro'
+
+export interface Props {
+  title?: string
+  description?: string
+  canonicalURL?: string
+  imageURL?: string
+  active: string
 }
 
-const { title } = Astro.props;
+const {
+  title = 'Bike route',
+  description = 'Vistula Cycling Route in Małopolska (southern Poland)',
+  canonicalURL = 'https://portfolio.darekduda.pl/bike-ruute/',
+  imageURL = '/data/City_images/Kazimierz_Dolny_Image.jpg',
+  active
+} = Astro.props
 ---
 
 <!doctype html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
-	</head>
-	<body>
-		<slot />
-	</body>
+<html lang='en' class='min-h-screen'>
+  <head>
+    <meta charset='UTF-8' />
+    <meta name='viewport' content='width=device-width, initial-scale=1' />
+    <link rel='icon' type='image/png' href='/recipes/cooking.png' />
+    <link rel='sitemap' href='/sitemap-index.xml' />
+    <meta name='generator' content={Astro.generator} />
+    <meta name='description' content={description} />
+    <meta name='theme-color' content='#134e4a' />
+    <link rel='canonical' href={canonicalURL} />
+    <title>{title}</title>
+    <meta property='og:type' content='website' />
+    <meta property='og:url' content={canonicalURL} />
+    <meta property='og:title' content={title} />
+    <meta property='og:description' content={description} />
+    <meta property='og:image' content={imageURL} />
+    <meta property='twitter:card' content='summary_large_image' />
+    <meta property='twitter:url' content={canonicalURL} />
+    <meta property='twitter:title' content={title} />
+    <meta property='twitter:description' content={description} />
+    <meta property='twitter:image' content={imageURL} />
+
+  <body> 
+      <Header active={active} />
+      <main>
+        <slot />
+      </main>
+      <ToTopButton />
+      <Footer />
+  </body>
 </html>
 <style is:global>
-	:root {
-		--accent: 136, 58, 234;
-		--accent-light: 224, 204, 250;
-		--accent-dark: 49, 10, 101;
-		--accent-gradient: linear-gradient(
-			45deg,
-			rgb(var(--accent)),
-			rgb(var(--accent-light)) 30%,
-			white 60%
-		);
-	}
-	html {
-		font-family: system-ui, sans-serif;
-		background: #13151a;
-		background-size: 224px;
-	}
-	code {
-		font-family:
-			Menlo,
-			Monaco,
-			Lucida Console,
-			Liberation Mono,
-			DejaVu Sans Mono,
-			Bitstream Vera Sans Mono,
-			Courier New,
-			monospace;
-	}
+  :root {
+    --main-color: #e3051a;
+    --secondary-color: #30373f;
+    --heading-color: #242424;
+    --paragraph-color: #343434;
+    --heading-font: 'Source Serif Pro', sans-serif;
+    --body-font: 'Barlow', sans-serif;
+    --secondary-font: 'Roboto', sans-serif;
+    --third-font: 'Open Sans', sans-serif;
+    --fourth-font: 'Midnight Signature';
+  }
+  
+  :root {
+    --blue: #007bff;
+    --indigo: #6610f2;
+    --purple: #6f42c1;
+    --pink: #e83e8c;
+    --red: #dc3545;
+    --orange: #fd7e14;
+    --yellow: #ffc107;
+    --green: #28a745;
+    --teal: #20c997;
+    --cyan: #17a2b8;
+    --white: #fff;
+    --gray: #6c757d;
+    --gray-dark: #343a40;
+    --primary: #007bff;
+    --secondary: #6c757d;
+    --success: #28a745;
+    --info: #17a2b8;
+    --warning: #ffc107;
+    --danger: #dc3545;
+    --light: #f8f9fa;
+    --dark: #343a40;
+
+    --font-family-sans-serif: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+      'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+    --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono',
+      'Courier New', monospace;
+  }
+
+  /* reset */
+  *, ::after, ::before {
+  box-sizing: border-box;
+
+}
 </style>
