@@ -17,7 +17,7 @@ import Text from 'ol/style/Text';
 import { fromLonLat } from 'ol/proj';
 import type { FeatureLike } from 'ol/Feature';
 import type { CityData } from './types';
-import CityList from './CityList';
+import CityList from './CityListSlider';
 import type Feature from 'ol/Feature';
 import Point from 'ol/geom/Point';
 import LineString from 'ol/geom/LineString';
@@ -98,7 +98,7 @@ const VistulaCitiesMap: React.FC<Props> = () => {
 
     if (!feature) {
       mapView.animate({ center: centerCoordinate }, { zoom: 10 });
-      cityNameElement.innerHTML = 'Polish places Tour Map';
+      cityNameElement.innerHTML = 'Vistula places Tour Map';
       cityImageElement.setAttribute('src', './data/City_images/Polish_places_tour.png');
     } else {
       feature.setStyle(styleForSelect);
@@ -113,7 +113,7 @@ const VistulaCitiesMap: React.FC<Props> = () => {
       const featureName = feature.get('Cityname');
       const featureImage = feature.get('Cityimage');
       cityNameElement.innerHTML = `Name of the city: ${featureName}`;
-      cityImageElement.setAttribute('src', `./data/City_images/${featureImage}.jpg`);
+      cityImageElement.setAttribute('src', `./data/City_images/${featureImage}`);
       setSelectedCityId(feature.get('ID'));
     
     }
@@ -223,7 +223,7 @@ const VistulaCitiesMap: React.FC<Props> = () => {
           <div className="row">
             <div className="col-lg-12 text-center">
               <div className="contact-title">
-                <h1>Cities Tour Map</h1>
+                <h1>Vistula places Tour Map</h1>
               </div>
             </div>
           </div>
@@ -231,29 +231,32 @@ const VistulaCitiesMap: React.FC<Props> = () => {
             <div className="col-lg-5">
               <div className="mapouter">
                 <div className="gmap_canvas">
-                  <div id="openlayers-map" style={{ height: '500px', width: '100%' }}></div>
+                  <div id="openlayers-map" style={{ height: '650px', width: '100%' }}></div>
                 </div>
               </div>
             </div>
             <div className="col-lg-7">
               <div className="contact-right">
                 <div id="popover-text"></div>
-                <div id="cityname">Welcome to Polish places Tour Map</div>
-                <img id="cityimage" alt="City" src="./data/City_images/Polish_places_tour.png" className="rounded-2xl shadow-xl mb-6 aspect-thumbnail object-cover" />
+                <div id="cityname" className="text-center text-lg">Welcome to Vistula places Tour Map</div>
+                <img id="cityimage" alt="City" src="./data/City_images/Polish_places_tour.png" className="md:pt-40 rounded-2xl shadow-xl mb-6 aspect-thumbnail object-cover" />
               </div>
             </div>
           </div>
         </div>
       </div>
       <div className="column-navigation">
-        <button title="Home" id="Home" className="active" onClick={handleCityClick}>
-          <i className="home" id="Home">
+        <div className="home">
+          <button role="button" title="Home" id="Home" className="button-23 city-item active" onClick={handleCityClick}>
+          <i>
             <svg fill="#000000" width="1rem" height="1rem" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
               <title>house</title>
               <path d="M0 16h4l12-13.696 12 13.696h4l-13.984-16h-4zM4 32h8v-9.984q0-0.832 0.576-1.408t1.44-0.608h4q0.8 0 1.408 0.608t0.576 1.408v9.984h8v-13.408l-12-13.248-12 13.248v13.408zM26.016 6.112l4 4.576v-8.672h-4v4.096z"></path>
             </svg>
           </i>
-        </button>
+          </button>
+        </div>
+        
         <CityList cityData={cityData} selectedCityId={selectedCityId} onCityClick={handleCityClick} />
       </div>
     </div>

@@ -54,7 +54,7 @@ h1 {
 
 @media (min-width: 48em) {
     .container {
-        max-width:45em;
+        max-width: 45em;
     }
 }
 
@@ -82,7 +82,7 @@ h1 {
     }
 }
 
-@media (min-width:  87.5em) {
+@media (min-width: 87.5em) {
     .container {
         max-width: 80em;
     }
@@ -96,7 +96,6 @@ h1 {
 
 /* Specific component styles */
 .home-contact {
-    margin-top:  6.25rem;
     position: relative;
 }
 
@@ -154,46 +153,80 @@ h1 {
     padding: 0.25rem;
     border: 1px solid black;
     border-radius: 0.25rem;
-    position: absolute;     
+    position: absolute;
 }
 
-/* slider styles */
-/* 
-.column-navigation button {
-    display: block;
-    text-align: center;
-    padding: 0.625rem;
-    color: blue;
-    font-size: 1rem;
-}
+/* link button active on slider */
 
-.column-navigation button:hover {
-    background-color: #55828d;
-}
-
-.link-button {
-    background: none;
-    color: blue;
-    border: none;
-    padding: 0;
-    text-decoration: none;
-    cursor: pointer;
-    font: inherit;
-    display: inline;
-  }
-  
-  .link-button:hover,
-  .link-button:focus {
-    text-decoration: none;
-    outline: none;
-  }
-  
-  .city-item {
-    text-align: center; 
-    margin: 10px; 
-  }
-   */
-
-   .active{
+.active {
     background-color: #4CAF50
-  }
+}
+
+
+.button-23.city-item.active {
+    background-color: #4CAF50
+}
+
+.button-23.link-button.active {
+    background-color: #4CAF50
+}
+
+.column-navigation {
+    margin-block: 2rem 2rem;
+}
+
+/* image svg main button home */
+.home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-block: 2rem 2rem;
+
+}
+
+/* 
+button
+*/
+.button-23 {
+    background-color: #FFFFFF;
+    border: 1px solid #222222;
+    border-radius: 0.5rem;
+    box-sizing: border-box;
+    color: #222222;
+    cursor: pointer;
+    display: inline-block;
+    font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.25rem;
+    margin: 0;
+    outline: none;
+    padding: 0.8125em 1.4375em;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    touch-action: manipulation;
+    transition: box-shadow .2s, -ms-transform .1s, -webkit-transform .1s, transform .1s;
+    user-select: none;
+    -webkit-user-select: none;
+    width: auto;
+}
+
+.button-23:focus-visible {
+    box-shadow: #222222 0 0 0 2px, rgba(255, 255, 255, 0.8) 0 0 0 4px;
+    transition: box-shadow .2s;
+}
+
+.button-23:active {
+    background-color: #F7F7F7;
+    border-color: #000000;
+    transform: scale(.96);
+}
+
+.button-23:disabled {
+    border-color: #DDDDDD;
+    color: #DDDDDD;
+    cursor: not-allowed;
+    opacity: 1;
+}

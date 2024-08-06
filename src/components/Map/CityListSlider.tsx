@@ -1,4 +1,4 @@
-import React, { Component, useEffect, useRef } from 'react';
+import React, { useEffect, useRef } from 'react';
 import Slider from 'react-slick';
 import type { CityData } from './types'; // Assuming CityData type is defined
 
@@ -6,6 +6,7 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import PrevArrow from './PrevArrow';
 import NextArrow from './NextArrow';
+import './citylistslider.css';
 
 
 //TODO: aroows next and prevoiusdont work
@@ -47,7 +48,7 @@ const CityList: React.FC<Props> = ({ cityData, onCityClick, selectedCityId}) => 
           <button
             id={city.properties.Cityname}
             onClick={onCityClick}
-            className="link-button"
+            className=" button-23 link-button"
             aria-label={`View details for ${city.properties.Cityname}`}
           >
             {city.properties.Cityname}
