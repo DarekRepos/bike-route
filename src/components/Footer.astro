@@ -1,0 +1,15 @@
+---
+import Container from './Container.astro'
+import CopyrightInfo from './CopyrightInfo'
+---
+
+<footer>
+  <div class="min-h-[124px] bg-[url('../images/footer.png')] bg-cover"></div>
+  <div class='bg-[rgb(239,239,239)]'>
+    <Container>
+      <div class='flex flex-col items-center justify-center py-12 text-center'>
+        <CopyrightInfo client:load />
+      </div>
+    </Container>
+  </div>
+</footer>
