@@ -6,7 +6,7 @@
       "properties": {
         "ID": 1,
         "Cityname": "Kazimierz Dolny",
-        "Cityimage": "Kazimierz_Dolny_Image"
+        "Cityimage": "Kazimierz_Dolny_Image.jpg"
       },
       "geometry": {
         "type": "Point",
@@ -21,7 +21,7 @@
       "properties": {
         "ID": 2,
         "Cityname": "Cholewianka",
-        "Cityimage": "Cholewianka_Image"
+        "Cityimage": "cholewianka_image.png"
       },
       "geometry": {
         "type": "Point",
@@ -36,7 +36,7 @@
       "properties": {
         "ID": 3,
         "Cityname": "Zagajdzie",
-        "Cityimage": "Zagajdzie_Image"
+        "Cityimage": "zagajdzie_image.png"
       },
       "geometry": {
         "type": "Point",
@@ -51,7 +51,7 @@
       "properties": {
         "ID": 4,
         "Cityname": "Rogów",
-        "Cityimage": "Rogow_Image"
+        "Cityimage": "rogow_image.png"
       },
       "geometry": {
         "type": "Point",
@@ -66,7 +66,7 @@
       "properties": {
         "ID": 5,
         "Cityname": "Polanówka",
-        "Cityimage": "Polanowka_Image"
+        "Cityimage": "polanowka_image.png"
       },
       "geometry": {
         "type": "Point",
@@ -81,7 +81,7 @@
       "properties": {
         "ID": 6,
         "Cityname": "Pomorze",
-        "Cityimage": "Pomorze_Image"
+        "Cityimage": "Pomorze_Image.jpg"
       },
       "geometry": {
         "type": "Point",
@@ -95,8 +95,8 @@
       "type": "Feature",
       "properties": {
         "ID": 7,
-        "Cityname": "Opole Lubelskie Zespół Szkół Nr 1",
-        "Cityimage": "Opole_Lubelskie_Zespól_Szkol_Nr_1_Image"
+        "Cityname": "Opole Lubelskie",
+        "Cityimage": "opolelubelskie_image.png"
       },
       "geometry": {
         "type": "Point",
@@ -110,8 +110,8 @@
       "type": "Feature",
       "properties": {
         "ID": 8,
-        "Cityname": "Grabówka most na rzece Chodelce",
-        "Cityimage": "Grabowka_most_na_rzece_Chodelce_Image"
+        "Cityname": "Grabówka",
+        "Cityimage": "grabowka_image.png"
       },
       "geometry": {
         "type": "Point",
@@ -126,7 +126,7 @@
       "properties": {
         "ID": 9,
         "Cityname": "Dębiny",
-        "Cityimage": "Debiny_Image"
+        "Cityimage": "debiny_image.png"
       },
       "geometry": {
         "type": "Point",
@@ -140,8 +140,8 @@
       "type": "Feature",
       "properties": {
         "ID": 10,
-        "Cityname": "Siewalka Szkoła Podstawowa",
-        "Cityimage": "Siewalka_Szkola_Podstawowa_Image"
+        "Cityname": "Siewalka",
+        "Cityimage": "siewalka_image.png"
       },
       "geometry": {
         "type": "Point",
@@ -155,8 +155,8 @@
       "type": "Feature",
       "properties": {
         "ID": 11,
-        "Cityname": "Ruda Godowska przepust drogowy na Cieku Lipiniaka",
-        "Cityimage": "Ruda_Godowska_przepust_drogowy_na_Cieku_Lipiniaka_Image"
+        "Cityname": "Ruda Godowska",
+        "Cityimage": "rudagodowska_image.png"
       },
       "geometry": {
         "type": "Point",
@@ -171,7 +171,7 @@
       "properties": {
         "ID": 12,
         "Cityname": "Budzyń",
-        "Cityimage": "Budzyn_Image"
+        "Cityimage": "Budzyn_image.png"
       },
       "geometry": {
         "type": "Point",
@@ -186,7 +186,7 @@
       "properties": {
         "ID": 13,
         "Cityname": "Wólka Komaszycka",
-        "Cityimage": "Wólka_Komaszycka_Image"
+        "Cityimage": "wolkakomaszycka_image.png"
       },
       "geometry": {
         "type": "Point",
@@ -201,7 +201,7 @@
       "properties": {
         "ID": 14,
         "Cityname": "Puszno Godowskie",
-        "Cityimage": "Puszno_Godowskie_Image"
+        "Cityimage": "pusznogodowskie_image.png"
       },
       "geometry": {
         "type": "Point",
@@ -216,7 +216,7 @@
       "properties": {
         "ID": 15,
         "Cityname": "Dąbrowa Godowska",
-        "Cityimage": "Dabrowa_Godowska_Image"
+        "Cityimage": "dabrowagodowska_image.png"
       },
       "geometry": {
         "type": "Point",
@@ -231,7 +231,7 @@
       "properties": {
         "ID": 16,
         "Cityname": "Świdno",
-        "Cityimage": "Swidno_Image"
+        "Cityimage": "swidno_image.png"
       },
       "geometry": {
         "type": "Point",
@@ -246,7 +246,7 @@
       "properties": {
         "ID": 17,
         "Cityname": "Majdan Bobowski",
-        "Cityimage": "Majdan_Bobowski_Image"
+        "Cityimage": "majdanbobowski_image.png"
       },
       "geometry": {
         "type": "Point",
@@ -261,7 +261,7 @@
       "properties": {
         "ID": 18,
         "Cityname": "Kol. Boby",
-        "Cityimage": "Kol_Boby_Image"
+        "Cityimage": "kolonia-boby_image.png"
       },
       "geometry": {
         "type": "Point",
@@ -276,7 +276,7 @@
       "properties": {
         "ID": 19,
         "Cityname": "Natalin",
-        "Cityimage": "Natalin_Image"
+        "Cityimage": "natalin_image.png"
       },
       "geometry": {
         "type": "Point",
@@ -291,7 +291,7 @@
       "properties": {
         "ID": 20,
         "Cityname": "Bęczyn",
-        "Cityimage": "Beczyn_Image"
+        "Cityimage": "Beczyn_image.png"
       },
       "geometry": {
         "type": "Point",
