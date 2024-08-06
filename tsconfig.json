@@ -1,21 +1,21 @@
 {
   "extends": "astro/tsconfigs/strict",
   "compilerOptions": {
-      "resolveJsonModule": true,
-      "esModuleInterop": true,
-      "strict": true,
-      "verbatimModuleSyntax": true,
-      "skipLibCheck": true,
-      "forceConsistentCasingInFileNames": true,
-      "jsx": "react",
-      "module": "esnext",
-      "moduleResolution": "node",
-      "target": "es6",
-      "allowSyntheticDefaultImports": true,
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "strict": true,
+    "verbatimModuleSyntax": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "jsx": "react",
+    "module": "esnext",
+    "moduleResolution": "node",
+    "target": "es6",
+    "allowSyntheticDefaultImports": true,
   },
   "include": [
-      "src/**/*.ts",
-      "src/**/*.tsx",
-      "geojson.d.ts"
-  ]
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "geojson.d.ts"
+  ],
 }
