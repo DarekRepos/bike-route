@@ -1,0 +1,334 @@
+---
+import Layout from '../layouts/Layout.astro'
+import LetterCanvas from '../components/canvas/LetterCanvas'
+---
+
+<Layout active='contact'>
+  <div class='contact-area'>
+    <div class='container mx-auto'>
+      <div class='flex flex-wrap'>
+        <div class='w-full lg:w-1/2'>
+          <div class='contact-left'>
+            <span class='contact-text block'>
+              We're Here to Help Have questions or need assistance?
+            </span>
+            <span class='contact-text-light block'>
+              We look forward to helping you plan your next adventure on the Vistula Valley Bike
+              Route!</span
+            >
+            <div class='info mt-12'>
+              <h3>Contact us through:</h3>
+              <span>
+                Email:<br />
+                vistulavalleybikeroute@gmail.com
+              </span>
+            </div>
+            <div class='info mt-12'>
+              <h3>Usefull websites:</h3>
+              <a href='#' class='block'>lubelskierowerem.pl</a>
+              <a href='#' class='block'>www.kraina.org.pl</a>
+            </div>
+            <LetterCanvas client:load />
+          </div>
+        </div>
+        <div class='w-full lg:w-1/2'>
+          <div class='contact-right mt-32 lg:mt-0'>
+            <div class='contact-title'>Send Us a Message</div>
+            <div class='form-group'>
+              <form class='contact-form form' action='' name='registration' novalidate='novalidate'>
+                <div class='form-field mb-6 mt-5'>
+                  <label for='name'>Full Name</label>
+                  <input
+                    name='firstname'
+                    id='name'
+                    type='text'
+                    placeholder='Mr willium smith'
+                    class='input-form w-full'
+                  />
+                </div>
+                <div class='form-field mb-6 mt-5'>
+                  <label for='email'>Email</label>
+                  <input
+                    name='email'
+                    id='email'
+                    type='email'
+                    placeholder='santa@gmail.com'
+                    class='input-form w-full'
+                    data-required='text'
+                    data-required-email='email'
+                  />
+                </div>
+                <div class='form-field mb-6 mt-5'>
+                  <label for='thought'>Thought</label>
+                  <textarea
+                    name='message'
+                    id='thought'
+                    cols='30'
+                    rows='5'
+                    placeholder='xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'
+                    class='w-full'></textarea>
+                </div>
+                <div class='btn-wrapper text-right'>
+                  <button type='submit' class='btn sm-btn'>Send</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout>
+<style>
+  .contact-text {
+    font-size: 1.125rem; /* 18px */
+    letter-spacing: 0.01em;
+    font-weight: 500;
+    color: var(--paragraph-color);
+    font-family: var(--body-font);
+    line-height: 1.75rem; /* 28px */
+    display: inline-block;
+    margin-block:  1rem 1rem;
+  }
+
+  .contact-text-light {
+    font-family: var(--body-font);
+    font-weight: 400;
+    font-size: 1.125rem; /* 18px */
+    line-height: 2.1875rem; /* 35px */
+    letter-spacing: 0.01em;
+    color: #818181;
+  }
+
+  .contact-area .contact-left .info span,
+  .contact-area .contact-left .info a {
+    font-family: var(--body-font);
+    font-weight: 400;
+    font-size: 1.125rem; /* 18px */
+    line-height: 2.1875rem; /* 35px */
+    letter-spacing: 0.01em;
+    color: #818181;
+  }
+
+  .contact-area .contact-left .info h3 {
+    font-size: 1.5rem; /* 24px */
+    letter-spacing: 0.01em;
+    font-weight: 500;
+    color: var(--heading-color);
+    font-family: var(--body-font);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: var(--heading-color);
+    font-family: var(--heading-font);
+  }
+
+  h3 {
+    font-size: 1.5rem; /* 24px */
+    line-height: 1.0833333333333333;
+  }
+
+  .contact-area .contact-right {
+    background: #e5e5e5;
+    padding: 0 2.6875rem 2.6875rem 2.6875rem; /* 0px 43px 43px 43px */
+  }
+
+  .margin-top-120 {
+    margin-top: 7.5rem; /* 120px */
+  }
+
+  @media only screen and (max-width: 74.9375em) { /* 1199px */
+    .contact-area .contact-right .contact-title {
+      font-size: 2.1875rem; /* 35px */
+      line-height: 2.1875rem; /* 35px */
+      padding-bottom: 1.875rem; /* 30px */
+    }
+  }
+
+  .contact-area .contact-right .contact-title {
+    font-size: 2.8125rem; /* 45px */
+    font-weight: 600;
+    font-family: var(--body-font);
+    text-align: center;
+    letter-spacing: 0.025em;
+    color: #6a6a6a;
+    line-height: 6.5rem; /* 104px */
+    border-bottom: 2px dashed #6a6a6a;
+    padding-top: 1.875rem; /* 30px */
+    margin-bottom: 3.125rem; /* 50px */
+  }
+
+  .form-group {
+    margin-bottom: 1rem;
+  }
+
+  .contact-area .contact-right .form-group .form-field label {
+    font-family: var(--body-font);
+    font-weight: 500;
+    font-size: 1.25rem; /* 20px */
+    color: var(--heading-color);
+    margin-bottom: 0.3125rem; /* 5px */
+  }
+
+  label {
+    display: inline-block;
+    margin-bottom: 0.5rem;
+  }
+
+  .contact-area .contact-right .form-group .form-field .input-form,
+  .contact-area .contact-right .form-group .form-field textarea {
+    width: 100%;
+    height: 4.375rem; /* 70px */
+    border-radius: 0.25rem; /* 4px */
+    border: 2px solid #efefef;
+    padding-left: 2.1875rem; /* 35px */
+    font-family: var(--body-font);
+    font-weight: 400;
+    color: var(--paragraph-color);
+    font-size: 1.125rem; /* 18px */
+  }
+
+  button,
+  input {
+    overflow: visible;
+  }
+
+  button,
+  input,
+  optgroup,
+  select,
+  textarea {
+    margin: 0;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+  }
+
+  .btn:not(:disabled):not(.disabled) {
+    cursor: pointer;
+  }
+
+  .contact-form .btn {
+    color: #fff !important;
+  }
+
+  .sm-btn {
+    width: 15.25rem; /* 244px */
+    -webkit-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+  }
+
+  .sm-btn,
+  .lg-btn {
+    height: 4.375rem; /* 70px */
+    border-radius: 0.25rem; /* 4px */
+    background: var(--main-color);
+    font-family: var(--body-font);
+    font-weight: 600;
+    font-size: 1.75rem; /* 28px */
+    -webkit-box-shadow: 10px 0px 20px rgba(227, 5, 26, 0.3);
+    box-shadow: 10px 0px 20px rgba(227, 5, 26, 0.3);
+    line-height: 3.125rem; /* 50px */
+  }
+
+  .btn {
+    display: inline-block;
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border: 1px solid transparent;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: 0.25rem;
+    transition:
+      color 0.15s ease-in-out,
+      background-color 0.15s ease-in-out,
+      border-color 0.15s ease-in-out,
+      box-shadow 0.15s ease-in-out;
+  }
+
+  [type='reset'],
+  [type='submit'],
+  button,
+  html [type='button'] {
+    -webkit-appearance: button;
+  }
+
+  button,
+  select {
+    text-transform: none;
+  }
+
+  button,
+  input {
+    overflow: visible;
+  }
+
+  button,
+  input,
+  optgroup,
+  select,
+  textarea {
+    margin: 0;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+  }
+
+  button {
+    border-radius: 0;
+  }
+
+  .desktop-right {
+    text-align: right;
+  }
+
+  .btn-wrapper {
+    display: block;
+  }
+
+  .contact-area .contact-right .form-group .form-field textarea {
+    height: auto;
+    padding: 2.1875rem; /* 35px */
+  }
+
+  .contact-area .contact-right .form-group .form-field .input-form,
+  .contact-area .contact-right .form-group .form-field textarea {
+    width: 100%;
+    border-radius: 0.25rem; /* 4px */
+    border: 2px solid #efefef;
+    padding-left: 2.1875rem; /* 35px */
+    font-family: var(--body-font);
+    font-weight: 400;
+    color: var(--paragraph-color);
+    font-size: 1.125rem; /* 18px */
+  }
+
+  textarea {
+    overflow: auto;
+    resize: vertical;
+  }
+
+  button,
+  input,
+  optgroup,
+  select,
+  textarea {
+    margin: 0;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+  }
+</style>
