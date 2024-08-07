@@ -1,0 +1,38 @@
+---
+import { Icon } from 'astro-icon/components'
+---
+
+<script type='module' is:inline>
+  const backToTop = document.getElementById('return-to-top')
+
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 40) {
+      backToTop.style.opacity = '1'
+      backToTop.style.display = 'flex'
+    } else {
+      backToTop.style.display = 'none'
+    }
+  })
+
+  backToTop.addEventListener('click', () => {
+    scrollToTop(500)
+  })
+
+  function scrollToTop(scrollDuration) {
+    var scrollStep = -window.scrollY / (scrollDuration / 15),
+      scrollInterval = setInterval(function () {
+        if (window.scrollY !== 0) {
+          window.scrollBy(0, scrollStep)
+        } else clearInterval(scrollInterval)
+      }, 15)
+  }
+</script>
+
+<a
+  id='return-to-top'
+  class='nav-up-arrow text-red-600 bg-white cursor-pointer shadow text-decoration-none fixed bottom-8 right-8 flex h-24 w-24 items-center justify-center rounded-full opacity-0 transition-all duration-300 ease-in-out hover:scale-110 hover:opacity-50'
+  href='#top'
+  aria-label='Return to top'
+>
+  <Icon name={'up-arrow-svgrepo-com'} width={32} height={32} />
+</a>
