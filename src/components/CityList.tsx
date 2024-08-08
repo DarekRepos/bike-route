@@ -34,7 +34,7 @@ const CityGrid: React.FC = () => {
 
   return (
     <>
-    <h2> Przebieg szlaku:</h2>
+    <h2  className='mb-4 text-xl font-bold'>The course of the trail:</h2>
       {data && data.features ? (
         <div className="city-grid">
           {data.features.map((city) => (
