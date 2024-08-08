@@ -1,0 +1,96 @@
+---
+import { Image } from 'astro:assets'
+import videoImg from '../../public/images/video.jpg'
+---
+
+<div class='about-video'>
+  <div class='container mx-auto'>
+    <div class='flex flex-wrap'>
+      <div class='flex items-center lg:w-6/12 xl:w-7/12'>
+        <div class='about-video-text'>
+          <h3 class='text-3xl font-bold'>Yes, we can do it!</h3>
+          <h6 class='text-lg'>When Bike Trail is Your Life</h6>
+          <p class='mt-4'>
+            <span>
+              Cycling is a great way to enjoy the outdoors and stay fit. Whether you're on a mountain trail or a city bike path,
+              the experience is always invigorating. From the thrill of downhill rides to the steady pace of a long-distance journey,
+              biking offers something for everyone.
+            </span>
+            <br />
+            The fresh air, the scenic views, and the sense of adventure make biking a favorite activity for many. It's also an eco-friendly
+            mode of transportation that reduces your carbon footprint. Remember to always wear a helmet and follow safety rules to ensure a
+            safe and enjoyable ride. With every pedal stroke, you're not just moving forward but also contributing to a healthier and more
+            sustainable world.
+          </p>
+        </div>
+      </div>
+      <div class='hidden lg:block lg:w-6/12 xl:w-5/12'>
+        <div class='about-video-img'>
+          <Image src={videoImg} alt='video images' format='webp' />
+          <h4 class='mt-4 text-xl font-semibold'>Get on and go!</h4>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<style>
+  .about-video {
+    background: #fcfcfc;
+    position: relative;
+  }
+
+  @media only screen and (max-width: 48em) {
+    .about-video-text {
+      padding-right: 0px;
+      padding-bottom: 3.125rem;;
+    }
+  }
+  .about-video-text {
+    padding-right: 10.0625rem;
+    padding:  3.125rem 0;
+  }
+  @media only screen and (min-width: 48em) and (max-width:61.9375em) {
+    .about-video-text {
+      padding-right: 0px;
+    }
+  }
+  @media only screen and (min-width: 75em) and (max-width: 94.875em) {
+    .about-video-text {
+      padding-right: 1.5625rem;
+      padding-bottom: 0.9375rem;
+    }
+  }
+  .about-video-text h3 {
+    font-size: 4.0625rem; /* 65px */
+    font-family: var(--body-font);
+    font-weight: 800;
+    margin-top: 0.3125rem; /* 5px */
+  }
+  .about-video-text h6 {
+    font-size:1.5625rem; /* 25px */
+    font-weight: 600;
+    margin-top: 1.875rem; /* 30px */
+    font-family: var(--body-font);
+  }
+  .about-video-text p span {
+    font-size: 1.25rem; /* 20px */
+    color: var(--main-color);
+    margin: 2.8125rem 0 1.875rem 0; /* 45px 0px 30px 0px */
+    float: left;
+  }
+  .about-video-img {
+    background-position: center;
+    position: relative;
+  }
+  .about-video-img h4 {
+    font-family: var(--body-font);
+    text-align: center;
+    bottom: 2.5rem; /* 40px */
+    position: absolute;
+    color: #fff;
+    margin: 0 auto;
+    width: 100%;
+    font-size: 2.8125rem; /* 45px */
+    font-weight: 600;
+  }
+</style>
