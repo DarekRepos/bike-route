@@ -1,0 +1,157 @@
+---
+import CityList from '../components/CityList'
+import Layout from '../layouts/Layout.astro'
+import { Image } from 'astro:assets'
+import WalImage from '../../public/images/walyprzeciwpowodziowe.png'
+import SadyImage from '../../public/images/sady.png'
+import ChodelskiObszarImage from '../../public/images/chodelskiobszar.png'
+import exploreImg from '../../public/images/explore.jpg'
+---
+
+<Layout active='scenic'>
+
+  <div class='explore-area'>
+    <div class='container-fluid'>
+      <div class='flex flex-wrap'>
+        <div class='hidden lg:block lg:w-1/3'>
+          <div class='explore_left'>
+            <Image src={exploreImg} alt='explore images' format='webp' />
+          </div>
+        </div>
+        <div class='xl:ml-1/12 flex flex-col items-center justify-center lg:w-2/3 xl:w-1/2'>
+          <div class='explore_right'>
+            <h1 class='mb-4 text-2xl font-bold'>Beatiful &amp; Nature</h1>
+            <p class='mb-6'>
+              I don't want to describe Kazimierz, as there are many websites that can do it better.
+              You can change the route and add some scenic points, like Męćmierz and the village of Dobre.
+              Keep in mind that not all routes are suitable for mountain biking. You can also turn towards
+              the village of Dobre and the Dobrsk Cliffs, where there's a nature reserve. You can also take a 
+              short ride along the Vistula River embankments.
+              
+              Discover the Beauty Along the Route. Feast your eyes on the most captivating views and must-visit 
+              spots along the Vistula Valley Bike Route.
+              
+              Your Cycling Adventure. Make the most of your trip by exploring these
+              attractions located near the Vistula Valley Bike Route. Simply click on
+              the points of interest to get more information.
+            </p>
+            <button class="bg-red-500 text-white font-bold py-2 px-4 rounded hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-opacity-50">
+              Explore more
+            </button>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+
+  
+  <div class='bg-gray-100 p-6'>
+    <h1></h1>
+    <div class='container mx-auto grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3'>
+      <div class='rounded-lg bg-white p-6 shadow-md'>
+        <h2 class='mb-4 text-xl font-bold'>Kraśnik Landscape Protection Area</h2>
+        <p>
+          Established in 1990, covering an area of 292.7 km². It is an area attractive in terms of landscape due to its varied terrain. Many rare plant species occur here; for example, the orchid *Cypripedium calceolus* can be found in the ravines. The peat bogs in the Wyżnica valley are interesting in terms of flora. The European buttercup grows here. In the forests, beech and fir trees are among the species present. The fauna here is also rich.
+        </p>
+      </div>
+  
+      <div class='rounded-lg bg-white p-6 shadow-md'>
+        <h2 class='mb-4 text-xl font-bold'>Flood Embankments of the Vistula River</h2>
+        <Image
+          src={WalImage}
+          alt='Flood embankment'
+          format='webp'
+          class='mb-4 h-48 w-full object-cover'
+        />
+        <p>
+          The Vistula River began to be regulated only in the 19th century, when many European rivers of similar size had already been regulated. These actions led to the narrowing of the riverbed. Large amounts of sand transported by the river were deposited between the regulating structures.
+        </p>
+      </div>
+  
+      <div class='rounded-lg bg-white p-6 shadow-md'>
+        <h2 class='mb-4 text-xl font-bold'>Vistula Fruit Growing Area</h2>
+        <Image
+          src={SadyImage}
+          alt='Vistula orchards'
+          format='webp'
+          class='mb-4 h-48 w-full object-cover'
+        />
+        <p>
+          The main factors for the development of fruit cultivation were favorable agro-climatic conditions and tradition. This is part of the Lublin region, characterized by the highest sunlight, the longest growing season, and good soils. Already at the turn of the 18th and 19th centuries, Izabela Czartoryska encouraged the inhabitants of the areas around Puławy and Kazimierz Dolny to plant fruit trees. Later, the fruit-growing area spread southward. Currently, apple trees dominate in the orchards (70%), with plums making up 10%. The area is particularly beautiful during the flowering of the trees. At this time, the “Festival of Blooming Orchards” is organized here.
+        </p>
+      </div>
+  
+      <div class='rounded-lg bg-white p-6 shadow-md'>
+        <h2 class='mb-4 text-xl font-bold'>Chodel Landscape Protection Area</h2>
+        <Image
+          src={ChodelskiObszarImage}
+          alt='Chodel Landscape Protection Area'
+          format='webp'
+          class=''
+        />
+        <p>
+          Established in 1990, covering an area of 23,339 ha. It protects the plain Chodelka Basin. The landscape is diversified by sandy dunes covered with pine forests. Numerous karst forms and several early medieval strongholds are found here.
+        </p>
+      </div>
+  
+      <div class='rounded-lg bg-white p-6 shadow-md'>
+        <h2 class='mb-4 text-xl font-bold'>Małopolska Vistula Gorge</h2>
+        <p>
+          A region encompassing the gorge section of the Vistula River valley, extending 80 km between Zawichost and Puławy. The river flows between the Lublin Uplands to the east and the Kielce-Sandomierz Uplands and the South Mazovian Hills to the west. The narrowing of the valley to about 1.5-10 km is closely related to the geological structure. The gorge is conditioned by tectonics – it has a consistent course (aligned with the layers of rock). The flat, alluvial valley floor is made up of floodplain and marsh terraces. It contrasts with the steep slopes, which reach up to 90 m in height, covered with drought-resistant vegetation. This makes the region very picturesque. There are also disused quarries. From the higher, right bank of the valley, there are views of the Radom Plain, built of sand and clay, which are less susceptible to water erosion compared to loess, hence the noticeable differences in relief between this land and the neighboring one.
+        </p>
+      </div>
+    </div>
+  </div>
+  
+  <CityList client:load />
+</Layout>
+
+  <style>
+      @media (min-width: 1200px) {
+    .explore_right {
+      margin-left: 8.333333%;
+    }
+  }
+      @media only screen and (max-width: 1199px) {
+    .explore-area .explore_right {
+      padding: 25px;
+    }
+  }
+  @media only screen and (max-width: 1400px) {
+    .explore-area .explore_right {
+      padding-top: 70px;
+    }
+  }
+  
+    .explore-area {
+      background: #fcfcfc;
+      margin-top: 100px;
+    }
+    .explore-area .explore_left img {
+      min-height: 151px;
+    }
+    .explore-area .explore_right h1 {
+      font-size: 65px;
+      line-height: 50px;
+      font-family: var(--body-font);
+      font-weight: 700;
+      margin-bottom: 55px;
+    }
+    .explore-area .explore_right p {
+      font-family: var(--body-font);
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 25px;
+      color: var(--paragraph-color);
+      margin-bottom: 65px;
+    }
+    .button-explore:hover {
+      -webkit-box-shadow: 8px 1px 20px rgba(227, 5, 26, 0.6);
+      box-shadow: 8px 1px 20px rgba(227, 5, 26, 0.6);
+      -webkit-transition: all 0.5s ease;
+      -o-transition: all 0.5s ease;
+      transition: all 0.5s ease;
+    }
+  </style>
+  
