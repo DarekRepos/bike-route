@@ -1,0 +1,108 @@
+---
+import { Image } from 'astro:assets'
+import fun1 from '../../public/images/fun1.jpg'
+import fun2 from '../../public/images/fun2.jpg'
+import fun3 from '../../public/images/fun3.jpg'
+import fun4 from '../../public/images/fun4.jpg'
+import fun5 from '../../public/images/fun5.jpg'
+import fun6 from '../../public/images/fun6.jpg'
+import fun7 from '../../public/images/fun7.jpg'
+import fun8 from '../../public/images/fun8.jpg'
+
+const images = [
+  { src: fun1, alt: 'fun1', title:'Secret Talent Show' , text: 'Did you know we have a champion beatboxer?' },
+  { src: fun2, alt: 'fun2', title: 'Our Pet Mascots', text: 'Meet our office pets—best co-workers ever!' },
+  { src: fun3, alt: 'fun3', title: 'Global Team', text: 'We’re spread across 5 continents and still feel close.' },
+  { src: fun4, alt: 'fun4', title: 'Fun Fridays', text: 'Every Friday is game night—remote or in-person!' },
+  { src: fun5, alt: 'fun5', title: 'Eco-Friendly Office', text: 'We’ve reduced our carbon footprint by 30% this year.' },
+  { src: fun6, alt: 'fun6', title: 'We Love Coffee', text: 'We’ve brewed over 10,000 cups this year!' },
+  { src: fun7, alt: 'fun7', title: 'Music Lovers', text: 'Our collaborative playlists make workdays sing!'},
+  { src: fun8, alt: 'fun8', title: 'Daily Walks', text: 'Team walks boost our creativity. Fresh air for fresh ideas!'}
+];
+---
+
+<div class='fun-facts mt-28'>
+  <div class='container mx-auto'>
+    <div class='flex flex-wrap'>
+      <div class='w-full'>
+        <div class='fun-title'>
+          <h1 class='text-center text-3xl leading-normal font-bold'>Some Fun Facts About Us</h1>
+        </div>
+      </div>
+    </div>
+    <div class='flex flex-wrap'>
+      {
+        images.map((image, index) => (
+          <div class='w-full sm:w-1/2 lg:w-1/4'>
+            <div class='fun-content'>
+              <Image src={image.src} alt={image.alt} format='webp' class='mx-auto' />
+              <div class='fun-text text-center'>
+                <h4 class='text-xl font-semibold'>{image.title}</h4>
+                <p class='text-gray-600 leading-8'>{image.text}</p>
+              </div>
+            </div>
+          </div>
+        ))
+      }      
+    </div>
+  </div>
+</div>
+
+<style>
+  .fun-facts .fun-title h1 {
+    font-size: 65px;
+    font-weight: 700;
+    font-family: var(--body-font);
+    text-align: center;
+    color: var(--paragraph-color);
+    margin-bottom: 70px;
+  }
+  .fun-facts .fun-content {
+    text-align: left;
+    position: relative;
+    min-height: 300px;
+    -webkit-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .fun-facts .fun-content::before {
+    position: absolute;
+    content: '';
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    opacity: 0;
+    -webkit-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+  }
+  .fun-facts .fun-content:hover:before {
+    opacity: 1;
+  }
+
+  .fun-facts .fun-content .fun-text {
+    position: absolute;
+    bottom: 20px;
+    left: 22px;
+  }
+  .fun-facts .fun-content .fun-text h4 {
+    text-align: left;
+    color: #fff;
+    font-size: 25px;
+    line-height: 3rem;
+    font-family: var(--body-font);
+    font-weight: 500;
+  }
+  .fun-facts .fun-content .fun-text p {
+    color: #fff;
+    font-size: 18px;
+    font-family: var(--body-font);
+    font-weight: 400;
+    line-height: 1.3rem
+  }
+</style>
