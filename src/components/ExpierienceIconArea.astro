@@ -1,0 +1,85 @@
+---
+import { Icon } from 'astro-icon/components'
+---
+<!-- 
+add sematics 
+user rem and em for media queries
+-->
+<div class='experience-area pb-16 pt-24 text-center'>
+  <div class='container mx-auto'>
+    <div class='grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4'>
+      <div class='single-experience text-center'>
+        <div class='icon mb-4 text-4xl'>
+          <i class='fa fa-black-tie'></i>
+          <Icon name={'brand-black-tie-svgrepo-com'} width={32} height={32} />
+        </div>
+        <div class='content'>
+          <h4 class='title text-lg font-semibold'>We are sportsman</h4>
+        </div>
+      </div>
+      <div class='single-experience text-center'>
+        <div class='icon mb-4 text-4xl'>
+          <Icon name={'heart-svgrepo-com'} width={32} height={32} />
+        </div>
+        <div class='content'>
+          <h4 class='title text-lg font-semibold'>People Love bikes</h4>
+        </div>
+      </div>
+      <div class='single-experience text-center'>
+        <div class='icon mb-4 text-4xl'>
+          <Icon name={'user-circle-svgrepo-com'} width={32} height={32} />
+        </div>
+        <div class='content'>
+          <h4 class='title text-lg font-semibold'>No Experience needed</h4>
+        </div>
+      </div>
+      <div class='single-experience text-center'>
+        <div class='icon mb-4 text-4xl'>
+          <Icon name={'phone-calling-svgrepo-com'} width={32} height={32} />
+        </div>
+        <div class='content'>
+          <h4 class='title text-lg font-semibold'>Support for cyclists</h4>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<style>
+  .experience-area .single-experience .icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    width: 5rem; 
+    height: 5rem; 
+    margin: 0 auto;
+    position: relative;
+    background: var(--main-color);
+    transition: all 0.3s ease;
+    border-radius: 50%;
+  }
+
+  .experience-area .single-experience .icon::before {
+    position: absolute;
+    background: rgba(227, 5, 26, 0.3);
+    width: 6.25rem; /* 100px */
+    height: 6.25rem; /* 100px */
+    content: '';
+    z-index: -1;
+    left: -0.625rem; /* 10px */
+    top: -0.625rem; /* 10px */
+    transition: all 0.3s ease;
+    border-radius: 50%;
+  }
+
+  .experience-area .single-experience .title {
+    font-size: 1.5625rem; /* 25px */
+    font-family: var(--body-font);
+    font-weight: 400;
+  }
+
+  .experience-area .single-experience .content {
+    margin-top: 2.375rem; /* 38px */
+  }
+</style>
+
