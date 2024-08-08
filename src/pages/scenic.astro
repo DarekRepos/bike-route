@@ -107,51 +107,58 @@ import exploreImg from '../../public/images/explore.jpg'
   <CityList client:load />
 </Layout>
 
-  <style>
-      @media (min-width: 1200px) {
+<style>
+  @media (min-width: 75em) { /* 1200px */
     .explore_right {
-      margin-left: 8.333333%;
+      margin-left: 8.3333%; /* 8.333333% */
     }
   }
-      @media only screen and (max-width: 1199px) {
+
+  @media only screen and (max-width: 74.9375em) { /* 1199px */
     .explore-area .explore_right {
-      padding: 25px;
+      padding: 1.5625rem; /* 25px */
     }
   }
-  @media only screen and (max-width: 1400px) {
+
+  @media only screen and (max-width: 87.5em) { /* 1400px */
     .explore-area .explore_right {
-      padding-top: 70px;
+      padding-top: 4.375rem; /* 70px */
     }
   }
-  
-    .explore-area {
-      background: #fcfcfc;
-      margin-top: 100px;
-    }
-    .explore-area .explore_left img {
-      min-height: 151px;
-    }
-    .explore-area .explore_right h1 {
-      font-size: 65px;
-      line-height: 50px;
-      font-family: var(--body-font);
-      font-weight: 700;
-      margin-bottom: 55px;
-    }
-    .explore-area .explore_right p {
-      font-family: var(--body-font);
-      font-weight: 400;
-      font-size: 18px;
-      line-height: 25px;
-      color: var(--paragraph-color);
-      margin-bottom: 65px;
-    }
-    .button-explore:hover {
-      -webkit-box-shadow: 8px 1px 20px rgba(227, 5, 26, 0.6);
-      box-shadow: 8px 1px 20px rgba(227, 5, 26, 0.6);
-      -webkit-transition: all 0.5s ease;
-      -o-transition: all 0.5s ease;
-      transition: all 0.5s ease;
-    }
-  </style>
+
+  .explore-area {
+    background: #fcfcfc;
+    margin-top: 6.25rem; /* 100px */
+  }
+
+  .explore-area .explore_left img {
+    min-height: 9.4375rem; /* 151px */
+  }
+
+  .explore-area .explore_right h1 {
+    font-size: 4.0625rem; /* 65px */
+    line-height: 3.125rem; /* 50px */
+    font-family: var(--body-font);
+    font-weight: 700;
+    margin-bottom: 3.4375rem; /* 55px */
+  }
+
+  .explore-area .explore_right p {
+    font-family: var(--body-font);
+    font-weight: 400;
+    font-size: 1.125rem; /* 18px */
+    line-height: 1.5625rem; /* 25px */
+    color: var(--paragraph-color);
+    margin-bottom: 4.0625rem; /* 65px */
+  }
+
+  .button-explore:hover {
+    -webkit-box-shadow: 0.5rem 0.0625rem 1.25rem rgba(227, 5, 26, 0.6); /* 8px 1px 20px */
+    box-shadow: 0.5rem 0.0625rem 1.25rem rgba(227, 5, 26, 0.6); /* 8px 1px 20px */
+    -webkit-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+  }
+</style>
+
   
