@@ -5,7 +5,7 @@ import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
 import CanvasLoader from "./Loader";
 
 const Letter = () => {
-  const letterModel = useGLTF('./letter/scene.gltf')
+  const letterModel = useGLTF('./bike-route/letter/scene.gltf')
   return (
     <primitive
       object={letterModel.scene}
