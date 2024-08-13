@@ -1,54 +1,41 @@
-# Astro Starter Kit: Basics
+# Bike Route Website
 
-```sh
-npm create astro@latest -- --template basics
-```
+Welcome to the Bike Route website, your ultimate guide to exploring scenic bike routes, picturesque landscapes, and natural attractions along the Vistula Valley. Whether you're an avid cyclist or just looking for a leisurely ride, our website provides detailed information on various routes, attractions, and tips to enhance your biking experience.
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
+## 🚴‍♂️ Features
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+### Explore Scenic Routes
+- Discover beautiful and nature-rich bike routes along the Vistula Valley.
+- Learn about the unique landscapes, including the Kraśnik Landscape Protection Area, Vistula Fruit Growing Area, and Małopolska Vistula Gorge.
 
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
+### Points of Interest
+- View and explore must-visit spots along the bike routes, such as nature reserves, historical sites, and scenic viewpoints.
+- Each point of interest includes detailed descriptions and images to help you plan your trip.
 
-## 🚀 Project Structure
+### User-Friendly Interface
+- Easy navigation and visually appealing design make it simple to find and explore routes.
+- Interactive maps and lists of cities along the bike routes allow for quick access to information.
 
-Inside of your Astro project, you'll see the following folders and files:
+## 💻 Development
 
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── components/
-│   │   └── Card.astro
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+### Commands
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
-
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
-
-Any static assets, like images, can be placed in the `public/` directory.
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
+To set up the project locally, use the following commands in the terminal from the root of the project:
 
 | Command                   | Action                                           |
 | :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+| `npm install`             | Installs all the necessary dependencies          |
+| `npm run dev`             | Starts the local development server at `localhost:4321` |
+| `npm run build`           | Builds the production site to the `./dist/` directory |
+| `npm run preview`         | Previews your build locally before deployment    |
+| `npm run astro ...`       | Executes Astro CLI commands, such as `astro add` and `astro check` |
+| `npm run astro -- --help` | Provides help with using the Astro CLI           |
 
-## 👀 Want to learn more?
+### Project Structure
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+The project is structured using the Astro framework. Key components include:
+
+- `components/CityList`: Displays a list of cities along the bike routes.
+- `layouts/Layout.astro`: Defines the layout used across the website pages.
+- `public/images`: Stores all the images used on the website, including scenic views and attraction highlights.
+
