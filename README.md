@@ -1,6 +1,6 @@
 # Bike Route Website
 
-Welcome to the Bike Route website, your ultimate guide to exploring scenic bike routes, picturesque landscapes, and natural attractions along the Vistula Valley. Whether you're an avid cyclist or just looking for a leisurely ride, our website provides detailed information on various routes, attractions, and tips to enhance your biking experience.
+This is the Bike Route website, it is guide to exploring scenic bike routes, picturesque landscapes, and natural attractions along the Vistula Valley. Whether you're an avid cyclist or just looking for a leisurely ride, this website provides detailed information on various routes, attractions, and tips to enhance your biking experience.
 
 ## 🚴‍♂️ Features
 
