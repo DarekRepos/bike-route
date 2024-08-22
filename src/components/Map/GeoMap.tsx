@@ -28,7 +28,7 @@ interface Props {}
 const VistulaCitiesMap: React.FC<Props> = () => {
   const centerCoordinate = fromLonLat([21.968889, 51.147222]);
   const [cityData, setCityData] = useState<CityData | null>(null);
-  const dataUrl = './data/route_cities.geojson';
+  const dataUrl = '../data/route_cities.geojson';
   const [selectedCityId, setSelectedCityId] = useState<string | null>(null);
 
   const mapRef = useRef<Map | null>(null);
@@ -99,7 +99,7 @@ const VistulaCitiesMap: React.FC<Props> = () => {
     if (!feature) {
       mapView.animate({ center: centerCoordinate }, { zoom: 10 });
       cityNameElement.innerHTML = 'Vistula places Tour Map';
-      cityImageElement.setAttribute('src', './bike-route/data/City_images/Polish_places_tour.png');
+      cityImageElement.setAttribute('src', '../data/City_images/Polish_places_tour.png');
     } else {
       feature.setStyle(styleForSelect);
 
@@ -113,7 +113,7 @@ const VistulaCitiesMap: React.FC<Props> = () => {
       const featureName = feature.get('Cityname');
       const featureImage = feature.get('Cityimage');
       cityNameElement.innerHTML = `Name of the city: ${featureName}`;
-      cityImageElement.setAttribute('src', `./bike-route/data/City_images/${featureImage}`);
+      cityImageElement.setAttribute('src', `../data/City_images/${featureImage}`);
       setSelectedCityId(feature.get('ID'));
     
     }
@@ -239,7 +239,7 @@ const VistulaCitiesMap: React.FC<Props> = () => {
               <div className="contact-right">
                 <div id="popover-text"></div>
                 <div id="cityname" className="text-center text-lg">Welcome to Vistula places Tour Map</div>
-                <img id="cityimage" alt="City" src="./bike-route/data/City_images/Polish_places_tour.png" className="md:pt-40 rounded-2xl shadow-xl mb-6 aspect-thumbnail object-cover" />
+                <img id="cityimage" alt="City" src="../data/City_images/Polish_places_tour.png" className="md:pt-40 rounded-2xl shadow-xl mb-6 aspect-thumbnail object-cover" />
               </div>
             </div>
           </div>
