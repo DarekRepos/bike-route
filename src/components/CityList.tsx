@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 
-const dataUrl = './bike-route/data/route_cities.geojson';
+const dataUrl = '../data/route_cities.geojson';
 
 interface CityProperties {
   Cityname: string;
